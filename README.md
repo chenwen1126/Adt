@@ -3,7 +3,7 @@ adt is Abstract Data Type With C.Provide list and so on.<br>
 
 # ADT
 ## list
-doubly linked list,provide method:<br>
+doubly linked list API:<br>
 #### list node create&destroy 
 ```c
 /* list node create&destroy */
@@ -69,7 +69,7 @@ list_each_reverse(node, list)
 ```
 # Test
 ## list
-##### list unit test record:<br>
+#### list unit test record:<br>
         ================== "list" unit test begin!!!=============== 
                        list_create test case pass!!!
                          list_push test case pass!!!
