@@ -1,3 +1,11 @@
+
+/**
+*	@file:		test.h
+*	@details:	c doubly linked list test file
+*	@author: 	chenwen(chenwen1126@tom.com)
+*   @datetime:  2018-2-6
+*   @history:   V1.0 first edition
+*/
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
