@@ -70,16 +70,16 @@ list_each_reverse(node, list)
 # Test
 ## list
 list unit test record:<br>
-`======== "list" unit test begin!!!=======<br>`
-`"list_create" test case done!!!<br>`
-`"list_push" test case done!!!<br>`
-`"list_pop" test case done!!!<br>`
-`"list_destroy" test case done!!!<br>`
-`"list_index" test case done!!!<br>`
-`"list_remove" test case done!!!<br>`
-`"list_insert" test case done!!!<br>`
-`"list_find" test case done!!!<br>`
-`"list_reverse" test case done!!!<br>`
-`"list_swap" test case done!!!<br>`
-`"list_each" test case done!!!<br>`
-`========All "list" unit test done and 100% sucessed!!!=======<br>`
+`======== "list" unit test begin!!!=======`<br>
+`"list_create" test case done!!!`<br>
+`"list_push" test case done!!!`<br>
+`"list_pop" test case done!!!`<br>
+`"list_destroy" test case done!!!`<br>
+`"list_index" test case done!!!`<br>
+`"list_remove" test case done!!!`<br>
+`"list_insert" test case done!!!`<br>
+`"list_find" test case done!!!`<br>
+`"list_reverse" test case done!!!`<br>
+`"list_swap" test case done!!!`<br>
+`"list_each" test case done!!!`<br>
+`========All "list" unit test done and 100% sucessed!!!=======`<br>
