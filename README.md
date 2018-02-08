@@ -1,7 +1,7 @@
 # Overview
 adt is Abstract Data Type With C.Provide list and so on.<br>
 
-# ADT
+# Adt
 ## list
 doubly linked list API:<br>
 #### list node create&destroy 
