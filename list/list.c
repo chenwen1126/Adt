@@ -58,6 +58,20 @@ void list_destroy(list_t* self)
 	free(self);
 }
 
+void list_clear(list_t*self)
+{
+	list_node_t* curr = self->head, *next;
+	while (curr)
+	{
+		next = curr->next;
+		node_destroy(self, curr);
+		curr = next;
+	}
+	self->len = 0;
+	self->head = null;
+	self->tail = null;
+}
+
 void list_push_front(list_t*self, list_node_t* node)
 {
 	if (self->len)

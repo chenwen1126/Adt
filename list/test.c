@@ -1,11 +1,3 @@
-
-/**
-*	@file:		test.c
-*	@details:	c doubly linked list test file
-*	@author: 	chenwen(chenwen1126@tom.com)
-*   @datetime:  2018-2-6
-*   @history:   V1.0 first edition
-*/
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
@@ -13,18 +5,18 @@
 #include "list.h"
 
 #define null NULL
-#define test_begin(test_unit) printf("======== \"%s\" unit test begin!!!=======\r\n", #test_unit);
-#define test_finshed(test_unit) printf("========All \"%s\" unit test done and 100%% sucessed!!!=======\r\n", #test_unit);
+#define test_begin(test_unit)   printf("================== \"%s\" unit test begin!!!===============\r\n", #test_unit);
+#define test_finshed(test_unit) printf("=========All \"%s\" unit test done and 100%% pass!!!========\r\n", #test_unit);
 #define test(test_case) \
 	test_##test_case(); \
-	printf("\"%s\" test case done!!!\r\n", #test_case);
+	printf("%26s test case pass!!!\r\n", #test_case);
 
 static free_cnt = 0;
 
 void free_proxy(void* val)
 {
 	free_cnt++;
-    free(val);
+	free(val);
 }
 
 int char_equal(void* val_a, void* val_b)
@@ -44,7 +36,7 @@ void test_list_create()
 {
 	list_t* list = list_create();
 	if (!list)
-		return ;
+		return;
 
 	assert(list->len == 0);
 	assert(list->head == null);
@@ -156,6 +148,40 @@ void test_list_pop()
 	assert(list->tail == d);
 	assert(d->next == null);
 	assert(d->prev == null);
+
+	list_destroy(list);
+}
+
+void test_list_clear()
+{
+	list_t* list = list_create();
+	list->free = free_proxy;
+	free_cnt = 0;
+
+	list_node_t* a = node_create("a");
+	list_node_t* b = node_create("b");
+	list_node_t* c = node_create("c");
+	list_node_t* d = node_create("d");
+	list_node_t* e = node_create("e");
+	list_node_t* f = node_create("f");
+	list_node_t* g = node_create("g");
+
+	list_push_back(list, node_create(a));
+	list_push_back(list, node_create(b));
+	list_push_back(list, node_create(c));
+	list_push_back(list, node_create(d));
+	list_push_back(list, node_create(e));
+	list_push_back(list, node_create(f));
+	list_push_back(list, node_create(g));
+	assert(list->len == 7);
+	assert(list->len == list_size(list));
+
+	list_clear(list);
+	assert(free_cnt == 7);
+	assert(list->len == 0);
+	assert(list->len == list_size(list));
+	assert(list->head == null);
+	assert(list->tail == null);
 
 	list_destroy(list);
 }
@@ -454,7 +480,7 @@ void test_list_reverse()
 	assert(g->next == null);
 	assert(a->prev == null);
 
-	list_reverse(list); 
+	list_reverse(list);
 	assert(list->len == 7);
 	assert(list->len == list_size(list));
 	assert(list->head == g);
@@ -603,8 +629,8 @@ void test_list_each()
 	assert(a->prev == null);
 
 	int len = 0;
-	char* buf = (char*)malloc(sizeof(char) * 16);
-	
+	char* buf = (char*)malloc(sizeof(char)* 16);
+
 	list_each(node, list)
 		len += sprintf_s(buf + len, sizeof(char)* 16, "%s", (char*)node->val);
 	assert(0 == strcmp(buf, "abcdefg"));
@@ -624,6 +650,7 @@ int main(void)
 	test(list_create);
 	test(list_push);
 	test(list_pop);
+	test(list_clear);
 	test(list_destroy);
 	test(list_index);
 	test(list_remove);

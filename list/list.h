@@ -2,8 +2,8 @@
 *	@file:		list.h
 *	@details:	c doubly linked list head file
 *	@author: 	chenwen(chenwen1126@tom.com)
-*   @datetime:  2018-2-6
-*   @history:   V1.0 first edition
+*	@datetime:  2018-2-6
+*	@history:   V1.0 first edition
 */
 
 #ifndef LIST_H
@@ -35,9 +35,10 @@ typedef struct {
 list_node_t* node_create(void* val);
 void node_destroy(list_t *list, list_node_t* node);
 
-/* list create&destroy */
+/* list create&destroy&clear */
 list_t* list_create();
 void list_destroy(list_t*self);
+void list_clear(list_t*self);
 
 /* list push&pop */
 void list_push_back(list_t*self, list_node_t* node);
