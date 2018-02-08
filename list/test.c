@@ -1,6 +1,6 @@
 
 /**
-*	@file:		test.h
+*	@file:		test.c
 *	@details:	c doubly linked list test file
 *	@author: 	chenwen(chenwen1126@tom.com)
 *   @datetime:  2018-2-6
