@@ -70,7 +70,7 @@ list_each_reverse(node, list)
 # Test
 ## list
 list unit test record:<br>
-`======== "list" unit test begin!!!=======<br>
+======== "list" unit test begin!!!=======<br>
 "list_create" test case done!!!<br>
 "list_push" test case done!!!<br>
 "list_pop" test case done!!!<br>
@@ -82,4 +82,4 @@ list unit test record:<br>
 "list_reverse" test case done!!!<br>
 "list_swap" test case done!!!<br>
 "list_each" test case done!!!<br>
-========All "list" unit test done and 100% sucessed!!!=======<br>`
+========All "list" unit test done and 100% sucessed!!!=======<br>
