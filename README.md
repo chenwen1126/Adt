@@ -65,5 +65,9 @@ void list_swap(list_t* self, list_node_t* node_a, list_node_t* node_b);
 ```c
 /* list foreach */
 list_each(node, list)
-```c
-#define list_each_reverse(node, list) for (list_node_t* node = list->tail; node; node = node->prev)
+list_each_reverse(node, list)
+```
+# Test
+## list
+list unit test record:<br>
+``
