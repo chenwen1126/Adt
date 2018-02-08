@@ -10,11 +10,12 @@ doubly linked list API:<br>
 list_node_t* node_create(void* val);
 void node_destroy(list_t *list, list_node_t* node);
 ```
-#### list create&destroy 
+#### list create&destroy&clear 
 ```c
-/* list create&destroy */
+/* list create&destroy&clear */
 list_t* list_create();
 void list_destroy(list_t*self);
+void list_clear(list_t*self);
 ```
 #### list push&pop
 ```c
@@ -70,16 +71,17 @@ list_each_reverse(node, list)
 # Test
 ## list
 #### list unit test record:<br>
-        ================== "list" unit test begin!!!=============== 
-                       list_create test case pass!!!
-                         list_push test case pass!!!
-                          list_pop test case pass!!!
-                      list_destroy test case pass!!!
-                        list_index test case pass!!!
-                       list_remove test case pass!!!
-                       list_insert test case pass!!!
-                         list_find test case pass!!!
-                      list_reverse test case pass!!!
-                         list_swap test case pass!!!
-                         list_each test case pass!!!
-        =========All "list" unit test done and 100% pass!!!========
+                ================== "list" unit test begin!!!=============== 
+                               list_create test case pass!!!
+                                 list_push test case pass!!!
+                                  list_pop test case pass!!!
+                                list_clear test case pass!!!
+                              list_destroy test case pass!!!
+                                list_index test case pass!!!
+                               list_remove test case pass!!!
+                               list_insert test case pass!!!
+                                 list_find test case pass!!!
+                              list_reverse test case pass!!!
+                                 list_swap test case pass!!!
+                                 list_each test case pass!!!
+                =========All "list" unit test done and 100% pass!!!========
